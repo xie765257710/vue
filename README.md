@@ -9,9 +9,11 @@
     3.npm install fastclick --save 解决移动端点击300毫秒延迟问题
     4.index.html添加meta标签
 
-<!-- ### pug+stylus 简洁模式
-    npm install pug pug-loader pug-filters --save-dev
-    npm install style-loader stylus stylus-loader css-loader --save-dev -->
+### pug+stylus 简洁模式
+    npm install pug pug-loader pug-filters --save
+    npm install style-loader stylus stylus-loader --save
+
+    pug+stylus引用：https://www.jianshu.com/p/f6b07f78df84
 
 ### 使用移动端框架 Vant
     npm i vant -S

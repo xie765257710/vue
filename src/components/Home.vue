@@ -1,24 +1,23 @@
-<template>
-    <div>
+<template lang="pug">
+    .home
         <van-nav-bar title="商品" />
-        <div class="commodity">
-            基础用法
-            通过v-model绑定 checkbox 的勾选状态
+        .commodity
+            span 基础用法
+            span 通过v-model绑定 checkbox 的勾选状态
 
             <van-checkbox v-model="checked">复选框</van-checkbox>
             
-            禁用状态
+            span 禁用状态
             <van-checkbox v-model="checked" disabled>复选框</van-checkbox>
-            自定义颜色
+            span 自定义颜色
             <van-checkbox v-model="checked" checked-color="#07c160">复选框</van-checkbox>
-            自定义图标
-            通过 icon 插槽自定义图标，可以通过 slot-scope 判断是否为选中状态
+            span 自定义图标
+            span 通过 icon 插槽自定义图标，可以通过 slot-scope 判断是否为选中状态
 
-            <van-checkbox v-model="checked"> 自定义图标
+            <van-checkbox v-model="checked"> 
+                span 自定义图标
                 <img slot="icon" slot-scope="props" :src="props.checked ? icon.active : icon.normal" >
-            </van-checkbox>  
-        </div>
-    </div>
+            </van-checkbox>
 </template>
 
 <script>
@@ -36,12 +35,11 @@ export default {
 }
 </script>
 
-<style scoped>
-    .van-checkbox{
-        margin: 20px;
-    }
-    .van-checkbox img{
-        width: 20px;
-        height: 20px;
-    }
+<style lang="stylus" scoped>
+    .van-checkbox
+        margin 20px
+        img
+            width 20px
+            height 20px
 </style>
+
