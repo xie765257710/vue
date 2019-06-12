@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="huaban" content="nopin" />
+
+    <title>h5端</title>
+    <style>
+      /* 根据不同的屏幕尺寸设置根html的字体 */
+      html {font-size: 62.5%; /*100 ÷ 16 × 100% = 625%*/}
+      @media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+          html { font-size: 70.3%; }
+      }
+      @media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+          html { font-size: 73.24%; }
+      }
+      @media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+          html { font-size: 75.0%; }
+      }
+      @media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+          html { font-size: 78.125%; }
+      }
+      @media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){
+          html { font-size: 80.86%; }
+      }
+      @media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
+          html { font-size: 84.375%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
