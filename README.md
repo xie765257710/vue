@@ -1,6 +1,6 @@
 # h5
 
-    A Vue.js H5 project 熟悉H5页面开发
+    A Vue.js H5 project H5页面开发模板
 
 ### 准备工作
 
@@ -9,9 +9,9 @@
     3.npm install fastclick --save 解决移动端点击300毫秒延迟问题
     4.index.html添加meta标签
 
-### pug+stylus 简洁模式
+<!-- ### pug+stylus 简洁模式
     npm install pug pug-loader pug-filters --save-dev
-    npm install style-loader stylus stylus-loader css-loader --save-dev
+    npm install style-loader stylus stylus-loader css-loader --save-dev -->
 
 ### 使用移动端框架 Vant
     npm i vant -S
