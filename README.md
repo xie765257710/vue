@@ -10,8 +10,10 @@
     4.index.html添加meta标签
 
 <!-- ### pug+stylus 简洁模式
-    npm install pug pug-loader pug-filters --save-dev
-    npm install style-loader stylus stylus-loader css-loader --save-dev -->
+    npm install pug pug-loader pug-filters --save
+    npm install style-loader stylus stylus-loader --save
+    切分支 h5_pug_stylus 即引入过的模板
+-->
 
 ### 使用移动端框架 Vant
     npm i vant -S
