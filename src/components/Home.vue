@@ -1,45 +1,69 @@
 <template lang="pug">
     .home
         <van-nav-bar title="商品" />
-        .commodity
-            span 基础用法
-            span 通过v-model绑定 checkbox 的勾选状态
-
-            <van-checkbox v-model="checked">复选框</van-checkbox>
-            
-            span 禁用状态
-            <van-checkbox v-model="checked" disabled>复选框</van-checkbox>
-            span 自定义颜色
-            <van-checkbox v-model="checked" checked-color="#07c160">复选框</van-checkbox>
-            span 自定义图标
-            span 通过 icon 插槽自定义图标，可以通过 slot-scope 判断是否为选中状态
-
-            <van-checkbox v-model="checked"> 
-                span 自定义图标
-                <img slot="icon" slot-scope="props" :src="props.checked ? icon.active : icon.normal" >
-            </van-checkbox>
+        <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
+            <van-card v-for="(item, index) in commoditys" :key="index" :tag="item.tag" :desc="item.details" :title="item.title" :thumb="item.img">
+                <div slot="tags">
+                    <van-tag plain type="primary">价格一: 志愿者积分 {{item.score}}</van-tag>
+                    <van-tag plain type="primary">价格二：人民币 ¥ {{item.rmb}} + 康乐币 {{item.klb}} 枚</van-tag>
+                </div>
+                <div slot="footer">
+                    <van-button type="danger" size="mini">加入购物车</van-button>
+                    <van-button type="primary" size="mini">立即购买</van-button>
+                </div>
+            </van-card>
+            .null-div(v-if="commoditys.length < 1")
+                img(src="../../static/imgs/mall.png")
+                span 暂无商品
+        </van-pull-refresh>
 </template>
 
 <script>
 export default {
     name: 'home',
     data () {
-        return {
-            checked: true,
-            icon: {
-                normal: '../../static/imgs/logo.png',
-                active: '../../static/imgs/logo.png'
-            }
+        return {            
+            count: 0,
+            isLoading: false,
+            commoditys:[
+                {id:1,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称打瞌睡的空间撒谎的客户萨科技的撒客户端撒谎框架的萨克的撒娇的卡是框架的大大萨达所多',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:2,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:3,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:3,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:3,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:3,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:4,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10}
+            ]
+        }
+    },
+    methods: {
+        onRefresh() {
+            setTimeout(() => {
+                this.$toast('刷新成功');
+                this.isLoading = false;
+                this.count++;
+            }, 500);
         }
     }
 }
 </script>
 
 <style lang="stylus" scoped>
-    .van-checkbox
-        margin 20px
-        img
-            width 20px
-            height 20px
+    .home
+        margin-bottom 50px
+        .van-pull-refresh            
+            width 100%
+            .null-div
+                display flex
+                flex-direction column
+                text-align center
+                justify-content center
+                align-items center
+                width 100%
+                height calc(100vh - 100px)
+                color gray
+                img 
+                    height 8rem
+                    width 8rem     
 </style>
 
