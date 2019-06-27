@@ -1,6 +1,6 @@
 <template>
   <div class="msg">
-      <van-nav-bar title="消息" />
+      <van-nav-bar fixed title="消息" />
       <div>
             <van-list
                 v-model="loading"

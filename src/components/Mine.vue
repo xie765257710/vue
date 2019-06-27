@@ -1,6 +1,6 @@
 <template lang="pug">
     .mine
-        <van-nav-bar title="我的" />
+        <van-nav-bar fixed title="我的" />
         .top
             img(src="../../static/imgs/head.png")
             .info

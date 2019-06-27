@@ -1,6 +1,6 @@
 <template lang="pug">
     .home
-        <van-nav-bar title="商品" />
+        <van-nav-bar fixed title="商品" />
         <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
             <van-card v-for="(item, index) in commoditys" :key="index" :tag="item.tag" :desc="item.details" :title="item.title" :thumb="item.img">
                 <div slot="tags">
@@ -26,13 +26,13 @@ export default {
             count: 0,
             isLoading: false,
             commoditys:[
-                {id:1,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称打瞌睡的空间撒谎的客户萨科技的撒客户端撒谎框架的萨克的撒娇的卡是框架的大大萨达所多',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
-                {id:2,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
-                {id:3,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
-                {id:3,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
-                {id:3,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
-                {id:3,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
-                {id:4,img:'../../static/imgs/timg.jpg',tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10}
+                {id:1,img:require('../../static/imgs/timg.jpg'),tag:'热销', title:'商品名称打瞌睡的空间撒谎的客户萨科技的撒客户端撒谎框架的萨克的撒娇的卡是框架的大大萨达所多',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:2,img:require('../../static/imgs/timg.jpg'),tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:3,img:require('../../static/imgs/timg.jpg'),tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:3,img:require('../../static/imgs/timg.jpg'),tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:3,img:require('../../static/imgs/timg.jpg'),tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:3,img:require('../../static/imgs/timg.jpg'),tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10},
+                {id:4,img:require('../../static/imgs/timg.jpg'),tag:'热销', title:'商品名称',details:'我是商品描述111啊啊啊21212',klb:2,rmb:1,score:10}
             ]
         }
     },
